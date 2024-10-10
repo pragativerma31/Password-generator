@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- The header -->
+
+            <h2 class="header">PASSWORD GENERATOR</h2>
+
+            <!-- The Password read only input  -->
+
+            <div class="input_box">
+                <input readonly type="text" id="input_generator" placeholder="Password">
+                <button id="copy_button">
+                    <span id="copy_msg"></span>
+                    <i class="fa-regular fa-copy fa-flip-both"></i>
+                </button>
+            </div>
+
+            <!-- Main box --> 
+
+            <div class="main_box">
+
+                <!-- password length box -->
+
+                <div class="password_length">
+                    <span>Password Length</span>
+                    <span id="output_value">0</span>
+                </div>
+                <div class="password_length_scroll">
+                    <input type="range" min="1" max="20" id="myRange" value="7">
+                </div>
+
+                <!-- Checkboxes -->
+
+                <div class="Checkboxes">
+                    <input type="checkbox" id="Upper_case">
+                    <label for="#Upper_case">Include uppercase letters</label>
+                </div>
+                <div class="Checkboxes">
+                    <input type="checkbox" id="Lower_case">
+                    <label for="#Lower_case">Include lowercase letters</label>
+                </div>
+                <div class="Checkboxes">
+                    <input type="checkbox" id="Nos">
+                    <label for="#Nos">Include numbers</label>
+                </div>
+                <div class="Checkboxes">
+                    <input type="checkbox" id="Symb">
+                    <label for="#Symb">Include symbols</label>
+                </div>
+
+                <!-- Strength -->
+
+                <div class="strength">
+                    <p>Strength</p>
+                    <div class="indicator"></div>
+                </div>
+
+                <!-- Generator button -->
+                <div class="Generate_box">
+                    <button id="generate_button">
+                        <p>GENERATE PASSWORD</p>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="active"></div>
+    <script src="https://kit.fontawesome.com/0ab5ed44d0.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
